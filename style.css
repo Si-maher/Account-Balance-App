@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html {
+  /* font-size: 62.5%; */
+  text-align: center;
+  padding: 150px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(./background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Cinzel", serif;
+}
+.wrapper {
+  background: red;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+}
+h1 {
+  color: #ff0000;
+  font-size: 6rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+.section-footer,
+p {
+  color: white;
+  font-size: 2rem;
+}
+.section-input {
+  padding: 1rem;
+}
+.section-transaction {
+  display: flex;
+}
+.income-box,
+.expenses-box {
+  border: 1px solid lightgray;
+  min-height: 400px;
+  width: 50%;
+}
+.incomes{
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+.incomes p{
+  font-size: 1rem;
+  
+}

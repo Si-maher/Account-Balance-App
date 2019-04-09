@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Account Balance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Account Balance App</h1>
+  <div class="wrapper">
+    <section class="section-input">
+      <input type="text" id="item-description" placeholder="Some description" />
+      <input type="text" id="item-cost" placeholder="Enter Amount" />
+      <select name="select" id="">
+        <option selected value='select'>--select--</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button class="add-button">Add</button>
+    </section>
+    <div class="section-transaction">
+      <div class="income-box">
+        <h3>Income</h3>
+        <hr />
+        <div class="income-data"></div>
+      </div>
+      <div class="expenses-box">
+        <h3>Expenses</h3>
+        <hr />
+        <div class="expense-data"></div>
+      </div>
+    </div>
+    <div class="section-footer">
+      <h3>Balance</h3>
+      <hr />
+      <p class="balance-result">Text</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
