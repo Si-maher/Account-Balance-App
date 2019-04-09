@@ -6,7 +6,7 @@
 body,html {
   /* font-size: 62.5%; */
   text-align: center;
-  padding: 150px;
+  padding: 10px;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -17,17 +17,29 @@ body,html {
   font-family: "Cinzel", serif;
 }
 .wrapper {
-  background: red;
+  background: rgba(161, 5, 5, 0.808);
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
   width: 70%;
+  margin-top: 2rem;
 }
 h1 {
-  color: #ff0000;
-  font-size: 6rem;
+  color: #fd0404b9;
+  
+  font-size: 5rem;
   font-weight: 100;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 2px;
+}
+hr{
+  width: 30%;
+ 
+  margin: 0 auto; 
+}
+input, select, button {
+  padding: 1rem;
+  margin-right: 0.5rem;
+
 }
 .section-footer,
 p {
@@ -35,21 +47,27 @@ p {
   font-size: 2rem;
 }
 .section-input {
-  padding: 1rem;
+  padding: 2rem;
 }
 .section-transaction {
   display: flex;
+ 
 }
 .income-box,
 .expenses-box {
   border: 1px solid lightgray;
   min-height: 400px;
   width: 50%;
+  margin-bottom: 1rem;
+  margin-right: 0.2rem;
 }
 .incomes{
   display: flex;
-  justify-content: space-evenly;
-  color: black;
+  justify-content:space-evenly;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  
+  
 }
 .incomes p{
   font-size: 1rem;

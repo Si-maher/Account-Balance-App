@@ -35,6 +35,7 @@ const accountBalance = {
       time: displayDateTime()
     }
   ],
+  // ==========================================================================
   addIncome: function (description, amount) {
     let time = displayDateTime();
     this.incomes.push({ description, amount, time });
@@ -50,6 +51,7 @@ const accountBalance = {
     );
 
   },
+  // ==============================================================================
   addExpense: function (description, amount) {
     let time = displayDateTime();
     this.expenses.push({ description, amount, time });
@@ -65,6 +67,7 @@ const accountBalance = {
     );
 
   },
+  // ==============================================================================
   totalIncome: function () {
     let sum = 0;
     let dataIncome = JSON.parse(localStorage.getItem('incomes'))
@@ -73,6 +76,7 @@ const accountBalance = {
     });
     return sum;
   },
+  // ====================================
   totalExpense: function () {
     let sum = 0;
     let dataExpence = JSON.parse(localStorage.getItem('expenses'))
@@ -81,10 +85,12 @@ const accountBalance = {
     })
     return sum;
   },
+  // ====================================
   calculateBalance: function () {
     let balance = this.totalIncome() - this.totalExpense();
     return balanceResult.innerHTML = `Your current balance is ${balance}`;
   },
+  // =====================================
   getIncomeData: function () {
     let dataIncome = JSON.parse(localStorage.getItem('incomes'));
 
@@ -100,8 +106,7 @@ const accountBalance = {
     return result
 
   },
-
-
+  // =======================================================================================
   getExpenseData: function () {
     let dataExpense = JSON.parse(localStorage.getItem('expenses'));
     expenseData.innerHTML = '';
@@ -115,6 +120,7 @@ const accountBalance = {
     return result;
   }
 }
+// =====================================================================================
 addButton.addEventListener('click', function () {
   let selectedValue = select.options[select.selectedIndex].value;
 
@@ -130,7 +136,7 @@ addButton.addEventListener('click', function () {
   accountBalance.calculateBalance();
   clearFields()
 })
-
+// =============================================================================
 function displayDateTime() {
   var myDate = new Date();
 
@@ -153,6 +159,7 @@ function displayDateTime() {
 
   return setDate;
 }
+// =========================================================================
 if (localStorage.length === 0 || localStorage.length == null) {
   localStorage.setItem('incomes', JSON.stringify(accountBalance.incomes, undefined, 2));
   localStorage.setItem('expenses', JSON.stringify(accountBalance.expenses, undefined, 2));
@@ -169,62 +176,3 @@ function clearFields() {
   select.value = 'select';
 
 }
-// =========================================================================
-// let incomeString = JSON.stringify(accountBalance, undefined, 2);
-// localStorage.setItem("incomes", incomeString);
-// let expenseString = JSON.stringify(accountBalance, undefined, 2);
-// localStorage.setItem("expenses", expenseString);
-
-// console.log(accountBalance.totalIncome());
-// console.log(accountBalance.totalExpense());
-
-
-// addButton.addEventListener("click", checkBalance);
-
-// function createContent() {
-//   let selectedValue = select.options[select.selectedIndex].value;
-//   console.log(select.options);
-
-// const parsedAccountBalance = JSON.parse(
-//   localStorage.getItem("accountBalance")
-// );
-// console.log(parsedAccountBalance);
-
-//   if (selectedValue === "income") {
-//     incomeData.innerHTML += `<div>
-//     <span>${itemDescription.value}  </span>
-//     <span>${itemCost.value}€</span>`;
-//     accountBalance.income.description.push(itemDescription.value);
-//     accountBalance.income.amount.push(parseInt(itemCost.value));
-//     console.log(accountBalance.income);
-//   } else if (selectedValue === "expense") {
-//     expenseData.innerHTML += `<div>
-//     <span>${itemDescription.value}  </span>
-//     <span>${itemCost.value}€</span>`;
-//     accountBalance.expense.description.push(itemDescription.value);
-//     accountBalance.expense.amount.push(parseInt(itemCost.value));
-//     console.log(accountBalance.expense);
-//   } else {
-//     console.log();
-//   }
-//   // const accountBalancedStringify = JSON.stringify(accountBalance, undefined, 2);
-//   // localStorage.setItem("accountBalance", accountBalancedStringify);
-//   // console.log(localStorage.getItem("accountBalance"));
-// }
-// function checkBalance() {
-//   let sumIncome = 0;
-//   let sumExpense = 0;
-
-//   accountBalance.income.amount.forEach(element => {
-//     sumIncome = sumIncome + element;
-//   });
-//   accountBalance.expense.amount.forEach(element => {
-//     sumExpense = sumExpense + element;
-//   });
-//   let balance = sumIncome - sumExpense;
-//   console.log(balance);
-//   document.querySelector(".balance-result").textContent = balance;
-//   console.log(balance);
-
-//   return balance;
-// }
